@@ -1,6 +1,6 @@
 {
   "name": "devMilapUI",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "build": "npx postcss src/index.css -o dist/devmilap.css --env production",
