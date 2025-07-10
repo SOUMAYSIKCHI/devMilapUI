@@ -1,32 +1,22 @@
-# 🚀 DevSyncUI — Tailwind Component Library
+# 🚀 devMilap — Tailwind CSS Component Library
 
-Welcome to **DevSyncUI**, a lightweight and modern UI library built with **Tailwind CSS**. All components are prefixed with `.devsync-` to avoid conflicts and are ready to drop into any project. This library is perfect for developers who want consistent, customizable, and clean UI without writing everything from scratch.
-
----
-
-## 📌 Why DevSyncUI?
-
-- ✅ **Fully Tailwind-based** — no JS, no bloat
-- 🧱 **Modular components** — buttons, cards, modals, and more
-- 🛡️ **Scoped utility classes** — uses `.devsync-*` to prevent naming collisions
-- 🎯 **Designed for production** — responsive, accessible, and extensible
+**devMilap** is a clean, modular, and production-ready UI library built entirely with **Tailwind CSS v3**. All components are prefixed with `.devmilap-*` to avoid class name conflicts and are optimized for real-world frontend applications.
 
 ---
 
-## 🛠️ Getting Started
+## 📌 Why devMilap?
 
-This guide helps you **install Tailwind**, **add DevSyncUI**, and **use components** in your project — even if you're a beginner.
+- ✅ **Built with Tailwind v3**
+- 🎯 **Minimalist & utility-first** — pure CSS, no JS
+- 🧱 **Component-first architecture** — buttons, cards, badges, and more
+- 🛡️ **Scoped with `.devmilap-` prefix** — no global class pollution
+- 🌍 **CDN + NPM** support — use it your way
 
 ---
-## 🔗 CDN Usage
 
-Include DevSyncUI directly in your HTML:
+## 📦 Installation via NPM
 
-```html
-<link href="https://cdn.jsdelivr.net/npm/devsyncui/dist/devsyncui.min.css" rel="stylesheet" />
-```
-
-### Step 1: Create a Vite Project (Optional)
+### ✅ Step 1: Create a Vite + React Project
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -34,117 +24,102 @@ cd my-app
 npm install
 ```
 
-### Step 2: Install Tailwind CSS
+---
+
+### ✅ Step 2: Install Tailwind CSS v3
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer
+npm install -D tailwindcss@^3 postcss autoprefixer
 npx tailwindcss init -p
 ```
 
-⚠️ **Note:** If `tailwind.config.js` or `postcss.config.js` aren't created automatically, create them manually:
+This creates two files:
+- `tailwind.config.js`
+- `postcss.config.js`
 
-**postcss.config.js** (Recommended Production Version)
+---
+
+### ✅ Step 3: Configure Tailwind
+
+Edit `tailwind.config.js`:
 
 ```js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-    ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
-  }
+  darkMode: 'class',
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/devmilap/dist/**/*.css'
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 }
 ```
 
-### Step 3: Install DevSyncUI
+---
+
+### ✅ Step 4: Install devMilap
 
 ```bash
-npm install devsyncui
+npm install devmilap
 ```
 
-### Step 4: Import Styles in your main CSS (e.g., `src/index.css`)
+---
+
+### ✅ Step 5: Import Styles
+
+In your main CSS file (e.g. `src/index.css`):
 
 ```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Import DevSyncUI styles */
-@import 'devsyncui/style';
+/* Import devMilap styles */
+@import 'devmilap/dist/devmilap.css';
 ```
-
-### Step 5: Register Plugin in `tailwind.config.js` ie your file should look like this:
-⚠️ **Note:** If `tailwind.config.js` or `postcss.config.js` aren't created automatically, create them manually:
-
-```js
-import devsyncPlugin from 'devsyncui/plugin';
-
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/devsyncui/**/*.{js,ts,jsx,tsx,css}",
-    "./node_modules/devsyncui/dist/mini.{js,css}"
-
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [devsyncPlugin],
-}
-```
-
-✅ This registers the DevSyncUI plugin with Tailwind CSS.
 
 ---
 
-## 📚 Component Classes
-
-View the full list of utility classes, variants, and themes on the [official documentation site](https://devsyncui.dev).
+### ✅ Step 6: Use devMilap Components
 
 ---
 
-## 🔐 License & Usage Terms
+## 🌐 CDN Usage (Optional)
 
-See full [terms.md](./terms.md)
+If you’re not using Tailwind in your build process, include via CDN:
+
+```html
+<link href="https://cdn.jsdelivr.net/npm/devmilap/dist/devmilap.min.css" rel="stylesheet" />
+```
+
+---
+
+Docs coming soon at [https://devmilap.dev](https://devmilap.dev)
+
+---
+
+## 🧾 License & Usage Terms
+
+MIT License © 2025 Soumay Sikchi
+
+### ✅ You May:
+- Use in personal and commercial projects
+- Modify and extend with attribution
+- Share components in open-source work
+
+### ❌ You May Not:
+- Reupload or rename this library
+- Redistribute under a different identity
+- Sell this package without consent
 
 ---
 
 ## 📬 Feedback & Contributions
 
-Feel free to open GitHub Issues for bugs or suggestions. Contributions will be open soon.
-
----
-
-## 🌐 Links
-
-- 📦 **NPM Package**: [devsyncui](https://www.npmjs.com/package/devsyncui)
-- 🧠 **Author**: Soumay Sikchi
-- 🎨 **Demo Website**: Coming soon
-- 🧾 **Documentation**: [devsyncui.dev](https://devsyncui.dev)
-
----
-
-## 📄 License & Usage Terms
-
-```markdown
-# License & Usage Terms
-
-MIT License © 2025 Soumay Sikchi
-
----
-
-## ✅ You May:
-
-- Use DevSyncUI in personal and commercial projects
-- Modify and extend the library in your own apps
-- Share components in open-source projects with attribution
-
-## ❌ You May Not:
-
-- Re-upload the DevSyncUI library as a new npm package
-- Rename the library and redistribute without consent
-- Claim full authorship of this codebase without contributing
-
----
-
-For collaboration, licensing deals, or enterprise distribution rights, please reach out via the official contact channels.
+- 🐞 [Submit Issues](https://github.com/SOUMAYSIKCHI/devMilapUI/issues)
+- 📦 [NPM Package](https://www.npmjs.com/package/devmilap)
+- 🧠 Author: [Soumay Sikchi](https://github.com/SOUMAYSIKCHI)
