@@ -1,6 +1,6 @@
 {
-  "name": "devMilapUI",
-  "version": "1.0.1",
+  "name": "devmilap",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "build": "npx postcss src/index.css -o dist/devmilap.css --env production",
@@ -12,7 +12,7 @@
     "ui",
     "devMilap",
     "tailwindcss-plugin",
-    "devMilapUI",
+    "devmilapui",
     "design"
   ],
   "author": "Soumay Sikchi",
