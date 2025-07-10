@@ -50,7 +50,7 @@ module.exports = {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
-    './node_modules/devmilap/dist/**/*.css'
+    "./node_modules/devmilap/**/*.{css,js}" // 👈 include this!
   ],
   theme: {
     extend: {},
@@ -74,18 +74,18 @@ npm install devmilap
 In your main CSS file (e.g. `src/index.css`):
 
 ```css
+/* Import devMilap styles */
+@import 'devmilap/dist/devmilap.min.css'; /* ✅ Correct location */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Import devMilap styles */
-@import 'devmilap/dist/devmilap.css';
 ```
 
 ---
 
-### ✅ Step 6: Use devMilap Components
-
+### ✅ Step 6: Use devMilap Components 
+Link to see design and components : 
 ---
 
 ## 🌐 CDN Usage (Optional)
@@ -93,7 +93,8 @@ In your main CSS file (e.g. `src/index.css`):
 If you’re not using Tailwind in your build process, include via CDN:
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/devmilap/dist/devmilap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/devmilap@latest/dist/devmilap.min.css" rel="stylesheet" />
+
 ```
 
 ---
