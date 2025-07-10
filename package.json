@@ -1,6 +1,6 @@
 {
   "name": "devmilap",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "scripts": {
     "build": "postcss src/index.css -o dist/devmilap.css --env production && postcss src/index.css -o dist/devmilap.min.css --env production",
