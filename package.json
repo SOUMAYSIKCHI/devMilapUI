@@ -1,5 +1,5 @@
 {
-  "name": "devmilap",
+  "name": "devMilapUI",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,14 +10,14 @@
     "tailwind",
     "component",
     "ui",
-    "devsync",
+    "devMilap",
     "tailwindcss-plugin",
-    "devsyncui",
+    "devMilapUI",
     "design"
   ],
   "author": "Soumay Sikchi",
   "license": "MIT",
-  "description": "Tailwind UI by DevMilap",
+  "description": "A clean, open-source, and developer-friendly component library built with Tailwind CSS",
   "homepage": "https://github.com/SOUMAYSIKCHI/devMilapUI#readme",
   "repository": {
     "type": "git",
